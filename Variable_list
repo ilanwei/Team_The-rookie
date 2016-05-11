@@ -1,0 +1,22 @@
+Variables in Mojo folder:
+'alt_title', 'director', 'domestic_gross', 'mojo_slug',
+'opening_per_theater', 'opening_weekend_take', 'production_budget',
+'release_date_limited', 'release_date_wide', 'title',
+'widest_release', 'worldwide_gross', 'year'
+
+Variables in Critic folder:
+"rating": "R"
+"complete": true
+"runtime_minutes": 123
+"metascore": 55
+"metacritic_page": "/movie/about-time" 
+"studio": "Universal Pictures"
+"year": 2013
+"genre": ["Sci-Fi", "Drama", "Fantasy", "Comedy", "Romance"]
+"user_score": 8.1
+"director": "Richard Curtis"
+"num_critic_reviews": [18, 13, 3, 34]
+"release_date": "2013-11-01"
+"title": "About Time"
+"num_user_ratings": 222
+"num_user_reviews": [37, 2, 6, 45]
