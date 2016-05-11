@@ -1,8 +1,17 @@
 Variables in Mojo folder:
-'alt_title', 'director', 'domestic_gross', 'mojo_slug',
-'opening_per_theater', 'opening_weekend_take', 'production_budget',
-'release_date_limited', 'release_date_wide', 'title',
-'widest_release', 'worldwide_gross', 'year'
+'alt_title'
+'director'
+'domestic_gross'
+'mojo_slug',
+'opening_per_theater'
+'opening_weekend_take'
+'production_budget',
+'release_date_limited'
+'release_date_wide'
+'title',
+'widest_release'
+'worldwide_gross'
+'year'
 
 Variables in Critic folder:
 "rating": "R"
