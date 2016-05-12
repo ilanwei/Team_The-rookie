@@ -10,6 +10,7 @@ Project 1
 import os
 import json
 import pandas as pd
+import re
 
 # constants
 BASE_DIR = "C://Users/ouj070/Documents/GitHub/ct16_cap1_ds5/project_1/data"
@@ -31,7 +32,6 @@ for i in NameList:
 
 mojo_movies_df = pd.DataFrame(movies)
 print len(movies)
-print movies[0]
 
 NameList = [name for name in os.listdir(META_DIR) if ".json" in name] 
 movies = []
@@ -47,6 +47,30 @@ for i in NameList:
 
 meta_movies_df = pd.DataFrame(movies)
 print len(movies)
-print movies[0]
 
+mojo_movies_df['title_cln'] = mojo_movies_df['title']
+meta_movies_df['title_cln'] = meta_movies_df['title']
+
+def clean(dataframe, columnname):
+    dataframe[columnname].replace("\\.", "",inplace=True, regex = True)
+    dataframe[columnname].replace(",", "",inplace=True, regex = True)
+    dataframe[columnname].replace(":", "",inplace=True, regex = True)
+    dataframe[columnname].replace("'", "",inplace=True, regex = True)
+    dataframe[columnname].replace("!", "",inplace=True, regex = True)
+    dataframe[columnname].replace("-", "",inplace=True, regex = True)
+    dataframe[columnname].replace("?", "",inplace=True, regex = True)
+    dataframe[columnname].replace("\([^)]*\)", "",inplace=True, regex = True)
+    dataframe[columnname].replace(" ", "",inplace=True, regex = True)
+    dataframe[columnname]= dataframe[columnname].str.lower()
+    
+clean(mojo_movies_df, 'title_cln')
+clean(meta_movies_df, 'title_cln')
+
+mojo_clean = mojo_movies_df[pd.notnull(mojo_movies_df['title_cln'])]
+meta_clean = meta_movies_df[pd.notnull(meta_movies_df['title_cln'])]
+
+
+movie_db = pd.merge(mojo_clean, meta_clean, on = 'title_cln', suffixes = ('_mojo', '_meta'), how = 'outer')
+
+movie_db.shape
 

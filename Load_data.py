@@ -30,8 +30,6 @@ for i in NameList:
         movies.append(movie)
 
 mojo_movies_df = pd.DataFrame(movies)
-print len(movies)
-print movies[0]
 
 NameList = [name for name in os.listdir(META_DIR) if ".json" in name] 
 movies = []
@@ -46,7 +44,3 @@ for i in NameList:
             movies.append(movie)
 
 meta_movies_df = pd.DataFrame(movies)
-print len(movies)
-print movies[0]
-
-
