@@ -15,3 +15,10 @@ meta_movies_df.shape
 # total elements and structure of Mojo
 mojo_movies_df.size
 mojo_movies_df.shape
+
+
+g = movie_final.columns.to_series().groupby(movie_final.dtypes).groups
+
+pd.value_counts(movie_final.director_meta.unique())
+
+a = movie_final.studio.unique()
