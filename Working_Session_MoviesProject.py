@@ -30,7 +30,7 @@ plt.hist(a)
 # opt3: use replace
 
 # Create Seasons
-movie_final['Season'] = 0
+movie_final['Season'] = np.nan
 idx = movie_final['month'].isin([2,3,4])
 movie_final['Season'][idx] = 1
 idx = movie_final['month'].isin([5,6,7])

@@ -20,7 +20,6 @@ a = movie_final['month'].dropna()
 plt.hist(a)
 
 # Create Seasons
-movie_final['Season'] = 0
 idx = movie_final['month'].isin([2,3,4])
 movie_final['Season'][idx] = 1
 idx = movie_final['month'].isin([5,6,7])
@@ -33,6 +32,12 @@ movie_final['Season'][idx] = 4
 plt.hist(movie_final['Season'], bins=range(5))
 plt.xticks(range(4))
 plt.xlim([0, 4])
+
+backup = movie_final.copy()
+
+new_list=['season_1','season_2','season_3','season_4']
+movie_final[new_list]=pd.get_dummies(movie_final['Season'], prefix = 'Season')
+
 
 #Create Metascore categories
 movie_final['Scoregroup'] = 0
