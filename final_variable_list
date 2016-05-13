@@ -1,0 +1,19 @@
+Column       	               Treatment	               Defination
+worldwide_gross          863	X	
+year_mojo                  2	X	
+domestic_gross            68	Target	
+opening_per_theater      169	missing impute by mean	 (float) - opening weekend take div by # theaters opening weekend
+opening_weekend_take     169	missing impute by mean	(float) - gross ticket sales on opening weekend
+widest_release           143	missing impute by mean	 (int) - greatest number of theaters simultaneously showing the film
+metascore                 86	missing impute by mean	(int) - the score derived from critic and user reviews on scale [0..100]
+runtime_minutes           56	missing impute by mean	(int) - how long is the movie
+production_budget       2054	later	
+director_meta              0	later	
+user_score                 0	good	(decimal) - some kind of weighted average of the user ratings
+year_meta                  0	good	
+release_date               0	Convert to seasons?	 (string) -- YYYY-MM-DD
+genre                      0	break into dummy	(list) - can have 0..many. boxofficemojo also lists genres but those are trippin.
+num_critic_reviews         0	break into dummy	(list) -- number of reviews categorized as [positive, neutral, negative, total]
+num_user_reviews           0	break into dummy	(list) -- number of reviews categorized as [positive, neutral, negative, total]
+rating                     0	break into dummy	MPAA rating
+studio                    22	break into dummy	(string) - production studio that made the movie
