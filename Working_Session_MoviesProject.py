@@ -58,7 +58,12 @@ movie_final['Scoregroup'][idx] = 4
 plt.hist(movie_final['Scoregroup'], bins = range(6))
 plt.xticks(range(5))
 plt.xlim([0, 5])
+
+
 backup = movie_final.copy()
+
+
+
 
 
 

@@ -24,3 +24,6 @@ pd.value_counts(movie_final.director_meta.unique())
 movie_final.studio.unique()
 
 movie_final.Scoregroup.unique()
+
+a = movie_final.studio.unique()
+a.sort_index()
