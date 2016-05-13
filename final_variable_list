@@ -2,6 +2,7 @@ Column       	            Treatment
 worldwide_gross           X	
 production_budget         X maybelater
 director_meta             X	maybe later
+genre                     X maybe later break into dummy	(list) - can have 0..many. boxofficemojo also lists genres but those are trippin.
 year_mojo               	X	don't think it is correlated
 year_meta                 X	don't think it is correlated
 rating                    X don't think it is correlated
@@ -17,5 +18,4 @@ runtime_minutes           missing impute by mean	(int) - how long is the movie
 num_user_rating           good
 user_score                good	(decimal) - some kind of weighted average of the user ratings (converted to float)
 release_date              Convert to season_ variable
-genre                     break into dummy	(list) - can have 0..many. boxofficemojo also lists genres but those are trippin.
 
