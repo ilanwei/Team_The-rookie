@@ -21,4 +21,6 @@ g = movie_final.columns.to_series().groupby(movie_final.dtypes).groups
 
 pd.value_counts(movie_final.director_meta.unique())
 
-a = movie_final.studio.unique()
+movie_final.studio.unique()
+
+movie_final.Scoregroup.unique()
