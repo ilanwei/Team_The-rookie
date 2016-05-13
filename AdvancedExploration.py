@@ -20,6 +20,12 @@ sns.boxplot(data = movie_final, y = 'domestic_gross', x = 'Scoregroup', hue = 'S
 
 sns.boxplot(data = movie_final, y = 'domestic_gross', x = 'Season')
 
+sns.barplot(data = movie_final, y = 'domestic_gross', x = 'Season')
+
+sns.barplot(data = movie_final, y = 'domestic_gross', x = 'metascore', hue = 'Season')
+
+
+
 director_gross = movie_final.groupby('director_meta')['domestic_gross'].mean().sort_values(ascending = False)
 
 top20_director = director_gross.head(20)

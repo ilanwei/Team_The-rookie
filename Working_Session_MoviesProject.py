@@ -41,8 +41,8 @@ idx = movie_final['month'].isin([11,12,1])
 movie_final['Season'][idx] = 4
 
 plt.hist(movie_final['Season'], bins=range(5))
-plt.xticks(range(4))
-plt.xlim([0, 4])
+plt.xticks(range(5))
+plt.xlim([0, 5])
 
 #Create Metascore categories
 movie_final['Scoregroup'] = 0
@@ -62,8 +62,17 @@ plt.xlim([0, 5])
 
 backup = movie_final.copy()
 
+movie_final['user_score'].dtype
 
+movie_final['user_score'] = movie_final['user_score'].convert_objects(convert_numeric=True)
 
+import itertools as it
+
+net_cols = movie_final['genre'].notnull
+movie_final['genre'].convert_objects(convert_objects=True)
+
+list(it.chain.from_iterable(movie_final.genre))
+for curr_val in unique_vals:  df['new_value_'+str(curr)] = df.a.map()
 
 
 

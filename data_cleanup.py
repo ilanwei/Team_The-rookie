@@ -27,6 +27,8 @@ meta_clean = meta_movies_df[pd.notnull(meta_movies_df['title_cln'])]
 
 movie_db = pd.merge(mojo_clean, meta_clean, on = 'title_cln', suffixes = ('_mojo', '_meta'), how = 'outer')
 
+movie_db['user_score'] = movie_db['user_score'].convert_objects(convert_numeric=True)
+
 keepers = ['domestic_gross', 'opening_per_theater', 'opening_weekend_take', 'production_budget', 'title_cln', 'widest_release', 'worldwide_gross', 'year_meta', 'year_mojo', 'director_meta', 'genre', 'metascore', 'num_critic_reviews', 'num_user_ratings', 'num_user_reviews', 'rating', 'release_date', 'runtime_minutes', 'studio', 'user_score']
 
 movie_final = movie_db[keepers]
